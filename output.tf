@@ -1,3 +1,8 @@
+output "deployer_arn" {
+  value       = aws_iam_access_key.access_key.id
+  description = "The ARN of the user that can be used for deploys"
+}
+
 output "deployer_access_key" {
   value       = aws_iam_access_key.access_key.id
   description = "The AWS Access Key that can be used for deploys"
