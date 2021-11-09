@@ -48,3 +48,5 @@ resource "aws_iam_access_key" "access_key" {
     aws_iam_user_policy.policy
   ]
 }
+
+resource "aws_cloudfront_origin_access_identity" "identity" {}
