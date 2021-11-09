@@ -9,6 +9,11 @@ output "deployer_secret_key" {
   description = "The AWS Secret Key that can be used for deploys"
 }
 
+output "cloudfront_access_identity_arn" {
+  value       = aws_cloudfront_origin_access_identity.identity.iam_arn
+  description = "The CloudFront S3 access identity"
+}
+
 output "cloudfront_access_identity_path" {
   value       = aws_cloudfront_origin_access_identity.identity.cloudfront_access_identity_path
   description = "The CloudFront S3 access identity"
