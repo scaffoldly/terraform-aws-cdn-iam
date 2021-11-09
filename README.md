@@ -17,6 +17,7 @@ module "CHANGME" {
 ```
 
 <!-- BEGIN_TF_DOCS -->
+## Requirements
 
 | Name | Version |
 |------|---------|
@@ -36,6 +37,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_cloudfront_origin_access_identity.identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_origin_access_identity) | resource |
 | [aws_iam_access_key.access_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
 | [aws_iam_user.user](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
 | [aws_iam_user_policy.policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy) | resource |
@@ -49,5 +51,9 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_cloudfront_access_identity_path"></a> [cloudfront\_access\_identity\_path](#output\_cloudfront\_access\_identity\_path) | The CloudFront S3 access identity |
+| <a name="output_deployer_access_key"></a> [deployer\_access\_key](#output\_deployer\_access\_key) | The AWS Access Key that can be used for deploys |
+| <a name="output_deployer_secret_key"></a> [deployer\_secret\_key](#output\_deployer\_secret\_key) | The AWS Secret Key that can be used for deploys |
 <!-- END_TF_DOCS -->
