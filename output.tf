@@ -1,5 +1,5 @@
 output "deployer_arn" {
-  value       = aws_iam_access_key.access_key.id
+  value       = aws_iam_user.user.arn
   description = "The ARN of the user that can be used for deploys"
 }
 
