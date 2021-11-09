@@ -56,5 +56,6 @@ No modules.
 | <a name="output_cloudfront_access_identity_arn"></a> [cloudfront\_access\_identity\_arn](#output\_cloudfront\_access\_identity\_arn) | The CloudFront S3 access identity |
 | <a name="output_cloudfront_access_identity_path"></a> [cloudfront\_access\_identity\_path](#output\_cloudfront\_access\_identity\_path) | The CloudFront S3 access identity |
 | <a name="output_deployer_access_key"></a> [deployer\_access\_key](#output\_deployer\_access\_key) | The AWS Access Key that can be used for deploys |
+| <a name="output_deployer_arn"></a> [deployer\_arn](#output\_deployer\_arn) | The ARN of the user that can be used for deploys |
 | <a name="output_deployer_secret_key"></a> [deployer\_secret\_key](#output\_deployer\_secret\_key) | The AWS Secret Key that can be used for deploys |
 <!-- END_TF_DOCS -->
