@@ -61,8 +61,8 @@ resource "aws_iam_role" "lambda_edge" {
         Effect = "Allow"
         Principal = {
           Service = [
-            "edgelambda.amazonaws.com"
-            "lambda.amazonaws.com",
+            "edgelambda.amazonaws.com",
+            "lambda.amazonaws.com"
           ]
         }
       },
