@@ -23,3 +23,8 @@ output "cloudfront_access_identity_path" {
   value       = aws_cloudfront_origin_access_identity.identity.cloudfront_access_identity_path
   description = "The CloudFront S3 access identity"
 }
+
+output "lambd_aedge_role_arn" {
+  value       = aws_iam_role.lambda_edge.arn
+  description = "The AWS IAM Role that can be used for Lambda@Edge"
+}

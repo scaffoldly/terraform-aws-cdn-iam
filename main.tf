@@ -50,3 +50,41 @@ resource "aws_iam_access_key" "access_key" {
 }
 
 resource "aws_cloudfront_origin_access_identity" "identity" {}
+
+resource "aws_iam_role" "lambda_edge" {
+  name = "${var.repository_name}-lambda-edge"
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Principal = {
+          Service = [
+            "edgelambda.amazonaws.com"
+            "lambda.amazonaws.com",
+          ]
+        }
+      },
+    ]
+  })
+
+  inline_policy {
+    name = "base"
+
+    policy = jsonencode({
+      Version = "2012-10-17"
+      Statement = [
+        {
+          Action = [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+          ],
+          Effect   = "Allow"
+          Resource = "arn:aws:logs:*:*:*"
+        },
+      ]
+    })
+  }
+}
