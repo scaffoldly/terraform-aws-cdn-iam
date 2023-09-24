@@ -39,6 +39,7 @@ No modules.
 |------|------|
 | [aws_cloudfront_origin_access_identity.identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_origin_access_identity) | resource |
 | [aws_iam_access_key.access_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
+| [aws_iam_role.lambda_edge](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_user.user](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
 | [aws_iam_user_policy.policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy) | resource |
 | [aws_iam_policy_document.base](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
@@ -58,4 +59,5 @@ No modules.
 | <a name="output_deployer_access_key"></a> [deployer\_access\_key](#output\_deployer\_access\_key) | The AWS Access Key that can be used for deploys |
 | <a name="output_deployer_arn"></a> [deployer\_arn](#output\_deployer\_arn) | The ARN of the user that can be used for deploys |
 | <a name="output_deployer_secret_key"></a> [deployer\_secret\_key](#output\_deployer\_secret\_key) | The AWS Secret Key that can be used for deploys |
+| <a name="output_lambd_aedge_role_arn"></a> [lambd\_aedge\_role\_arn](#output\_lambd\_aedge\_role\_arn) | The AWS IAM Role that can be used for Lambda@Edge |
 <!-- END_TF_DOCS -->
