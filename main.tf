@@ -1,6 +1,50 @@
 data "aws_iam_policy_document" "base" {
   statement {
     actions = [
+      "lambda:*EventSourceMapping*",
+      "xray:*Group*",
+      "xray:*SamplingRule*",
+      "xray:*EncryptionConfig*"
+    ]
+
+    resources = [
+      "*"
+    ]
+  }
+
+  statement {
+    actions = [
+      "iam:PassRole"
+    ]
+
+    resources = [
+      "arn:*:iam::*:role/*${var.repository_name}*"
+    ]
+  }
+
+  statement {
+    actions = [
+      "logs:DescribeLogGroups"
+    ]
+
+    resources = [
+      "arn:*:logs:*:*:log-group::log-stream:*"
+    ]
+  }
+
+  statement {
+    actions = [
+      "lambda:*",
+    ]
+
+    resources = [
+      "arn:*:lambda:*:*:function:*${var.repository_name}*",
+      "arn:*:lambda:*:*:layer:*",
+    ]
+  }
+
+  statement {
+    actions = [
       "s3:List*",
       "s3:Get*",
       "s3:Describe*",
