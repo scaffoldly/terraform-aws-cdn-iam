@@ -2,6 +2,9 @@ data "aws_iam_policy_document" "base" {
   statement {
     actions = [
       "lambda:*EventSourceMapping*",
+      "cloudfront:Get*",
+      "cloudfront:List*",
+      "cloudfront:Describe*",
       "xray:*Group*",
       "xray:*SamplingRule*",
       "xray:*EncryptionConfig*"
@@ -51,6 +54,7 @@ data "aws_iam_policy_document" "base" {
       "s3:Put*",
       "s3:Delete*",
       "cloudfront:CreateInvalidation",
+      "cloudfront:UpdateDistribution",
     ]
 
     resources = [
